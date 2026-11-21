@@ -1,15 +1,17 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portafolio profesional de Daniela Escobar, estudiante de Administración Tecnológica del ITM.">
+    <meta name="description" content="Portafolio profesional de Daniela Escobar Galeano, estudiante de Administración Tecnológica del ITM.">
 
-    <title>Daniela Escobar | Portafolio Profesional</title>
+    <title>Daniela Escobar Galeano | Portafolio Profesional</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,35 +24,63 @@
         }
 
         body {
-            background-color: #f0f8f4;
+            background-color: #eeeeee;
             color: #263b32;
             line-height: 1.6;
         }
 
+        /* ENCABEZADO */
+
         header {
             background-color: #064e3b;
             color: white;
-            padding: 20px 8%;
+            padding: 20px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 15px;
         }
 
         header h2 {
-            color: #50d6a0;
+            color: #a7f3d0;
             letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 22px;
             font-size: 14px;
         }
 
         nav a:hover {
-            color: #50d6a0;
+            color: #a7f3d0;
+        }
+
+        /* BOTÓN DE DESCARGA SUPERIOR */
+
+        .download-button {
+            background-color: #a7f3d0;
+            color: #064e3b;
+            padding: 11px 18px;
+            border-radius: 7px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: white;
+            transform: translateY(-2px);
         }
 
         /* PRESENTACIÓN */
@@ -102,25 +132,11 @@
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 15px;
-            margin: 5px;
         }
 
         .btn:hover {
             background-color: white;
             transform: translateY(-3px);
-        }
-
-        .btn-download {
-            background-color: white;
-            color: #047857;
-            border: 2px solid #a7f3d0;
-        }
-
-        .btn-download:hover {
-            background-color: #a7f3d0;
         }
 
         .hero-icon {
@@ -131,9 +147,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 75px;
+            font-size: 65px;
             color: #a7f3d0;
             margin: auto;
+            text-align: center;
         }
 
         /* SECCIONES */
@@ -228,7 +245,7 @@
         /* CONTACTO */
 
         .contact {
-            background-color: #dff3e9;
+            background-color: #e2e5e3;
         }
 
         .contact-info {
@@ -254,36 +271,6 @@
             color: #059669;
         }
 
-        /* BOTÓN DE DESCARGA */
-
-        .download-section {
-            text-align: center;
-            background-color: #f0f8f4;
-            padding: 45px 8%;
-        }
-
-        .download-section p {
-            color: #566b60;
-            margin-bottom: 20px;
-        }
-
-        .download-button {
-            background-color: #047857;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .download-button:hover {
-            background-color: #064e3b;
-            transform: translateY(-3px);
-        }
-
         /* PIE DE PÁGINA */
 
         footer {
@@ -294,22 +281,17 @@
             font-size: 14px;
         }
 
-        /* DISEÑO PARA CELULARES */
+        /* ADAPTACIÓN A CELULARES */
 
         @media (max-width: 700px) {
 
             header {
                 justify-content: center;
-                gap: 15px;
-            }
-
-            nav {
                 text-align: center;
             }
 
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
+            nav {
+                justify-content: center;
             }
 
             .hero {
@@ -330,17 +312,17 @@
             }
         }
 
-        /* CONFIGURACIÓN DEL PDF */
+        /* CONFIGURACIÓN DE IMPRESIÓN Y PDF */
 
         @media print {
 
             body {
-                background-color: white;
+                background-color: white !important;
                 color: #263b32;
             }
 
             header nav,
-            .download-section,
+            .download-button,
             .btn,
             footer {
                 display: none !important;
@@ -361,12 +343,6 @@
                 padding: 45px 8%;
             }
 
-            .hero-icon {
-                width: 120px;
-                height: 120px;
-                font-size: 45px;
-            }
-
             section {
                 padding: 30px 8%;
                 break-inside: avoid;
@@ -384,13 +360,13 @@
                 color: #064e3b !important;
             }
 
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
             a {
                 color: #047857 !important;
                 text-decoration: none;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
             }
 
             @page {
@@ -400,22 +376,33 @@
         }
 
     </style>
+
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
+    <!-- ENCABEZADO Y MENÚ -->
 
     <header>
 
         <h2>MI PORTAFOLIO</h2>
 
         <nav>
+
             <a href="#inicio">Inicio</a>
+
             <a href="#sobre-mi">Sobre mí</a>
+
             <a href="#formacion">Formación</a>
+
             <a href="#experiencia">Experiencia</a>
+
             <a href="#contacto">Contacto</a>
+
+            <button class="download-button" onclick="descargarPDF()">
+                📄 Descargar PDF
+            </button>
+
         </nav>
 
     </header>
@@ -431,7 +418,7 @@
             </div>
 
             <h1>
-                Hola, soy <span>Daniela Escobar</span>
+                Hola, soy <span>Daniela Escobar Galeano</span>
             </h1>
 
             <p>
@@ -448,7 +435,7 @@
         </div>
 
         <div class="hero-icon">
-            DE
+            DEG
         </div>
 
     </section>
@@ -464,7 +451,7 @@
         <div class="about">
 
             <p>
-                Soy Daniela Escobar, estudiante de Administración
+                Soy Daniela Escobar Galeano, estudiante de Administración
                 Tecnológica del Instituto Tecnológico Metropolitano
                 (ITM), actualmente cursando sexto semestre.
             </p>
@@ -571,7 +558,7 @@
 
             <p>
                 <strong>Nombre:</strong>
-                Daniela Escobar
+                Daniela Escobar Galeano
             </p>
 
             <p>
@@ -606,31 +593,12 @@
 
     </section>
 
-    <!-- BOTÓN PARA DESCARGAR EL PORTAFOLIO EN PDF -->
-
-    <section class="download-section">
-
-        <h2 class="section-title">
-            Descarga mi portafolio
-        </h2>
-
-        <p>
-            Puedes descargar una copia de mi portafolio
-            profesional en formato PDF.
-        </p>
-
-        <button class="download-button" onclick="descargarPDF()">
-            📄 Descargar portafolio en PDF
-        </button>
-
-    </section>
-
     <!-- PIE DE PÁGINA -->
 
     <footer>
 
         <p>
-            © 2026 Daniela Escobar | Portafolio Profesional
+            © 2026 Daniela Escobar Galeano | Portafolio Profesional
         </p>
 
         <p>
@@ -639,7 +607,7 @@
 
     </footer>
 
-    <!-- FUNCIÓN DE DESCARGA -->
+    <!-- FUNCIÓN PARA DESCARGAR PDF -->
 
     <script>
 
@@ -647,7 +615,7 @@
 
             const tituloOriginal = document.title;
 
-            document.title = "Portafolio_Daniela_Escobar";
+            document.title = "Portafolio_Daniela_Escobar_Galeano";
 
             window.print();
 
@@ -658,5 +626,5 @@
     </script>
 
 </body>
-</html>
 
+</html>

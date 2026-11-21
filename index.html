@@ -1,0 +1,662 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio profesional de Daniela Escobar, estudiante de Administración Tecnológica del ITM.">
+
+    <title>Daniela Escobar | Portafolio Profesional</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f0f8f4;
+            color: #263b32;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #064e3b;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #50d6a0;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #50d6a0;
+        }
+
+        /* PRESENTACIÓN */
+
+        .hero {
+            background: linear-gradient(135deg, #064e3b, #059669);
+            color: white;
+            padding: 90px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #a7f3d0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e0f2e9;
+            margin-bottom: 25px;
+        }
+
+        .hero-label {
+            color: #a7f3d0;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #a7f3d0;
+            color: #064e3b;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-download {
+            background-color: white;
+            color: #047857;
+            border: 2px solid #a7f3d0;
+        }
+
+        .btn-download:hover {
+            background-color: #a7f3d0;
+        }
+
+        .hero-icon {
+            width: 190px;
+            height: 190px;
+            border: 3px solid #a7f3d0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 75px;
+            color: #a7f3d0;
+            margin: auto;
+        }
+
+        /* SECCIONES */
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #064e3b;
+            margin-bottom: 35px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 65px;
+            height: 4px;
+            background-color: #10b981;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        /* SOBRE MÍ */
+
+        .about {
+            max-width: 950px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+            color: #566b60;
+        }
+
+        .about p {
+            margin-bottom: 18px;
+        }
+
+        .professional-profile {
+            background-color: white;
+            border-left: 5px solid #059669;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: justify;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .professional-profile h3 {
+            color: #047857;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* TARJETAS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+            border-bottom: 3px solid #10b981;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #047857;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #667085;
+            margin-bottom: 8px;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* CONTACTO */
+
+        .contact {
+            background-color: #dff3e9;
+        }
+
+        .contact-info {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 16px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-info strong {
+            color: #047857;
+        }
+
+        .contact-info a {
+            color: #059669;
+        }
+
+        /* BOTÓN DE DESCARGA */
+
+        .download-section {
+            text-align: center;
+            background-color: #f0f8f4;
+            padding: 45px 8%;
+        }
+
+        .download-section p {
+            color: #566b60;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            background-color: #047857;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #064e3b;
+            transform: translateY(-3px);
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background-color: #064e3b;
+            color: #d1fae5;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* DISEÑO PARA CELULARES */
+
+        @media (max-width: 700px) {
+
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 65px 6%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .professional-profile {
+                padding: 22px;
+            }
+        }
+
+        /* CONFIGURACIÓN DEL PDF */
+
+        @media print {
+
+            body {
+                background-color: white;
+                color: #263b32;
+            }
+
+            header nav,
+            .download-section,
+            .btn,
+            footer {
+                display: none !important;
+            }
+
+            header {
+                background-color: #064e3b !important;
+                color: white !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .hero {
+                background: #064e3b !important;
+                color: white !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                padding: 45px 8%;
+            }
+
+            .hero-icon {
+                width: 120px;
+                height: 120px;
+                font-size: 45px;
+            }
+
+            section {
+                padding: 30px 8%;
+                break-inside: avoid;
+            }
+
+            .card,
+            .professional-profile,
+            .contact-info {
+                box-shadow: none;
+                border: 1px solid #d1e7dc;
+                break-inside: avoid;
+            }
+
+            .section-title {
+                color: #064e3b !important;
+            }
+
+            a {
+                color: #047857 !important;
+                text-decoration: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h2>MI PORTAFOLIO</h2>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#formacion">Formación</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Portafolio profesional
+            </div>
+
+            <h1>
+                Hola, soy <span>Daniela Escobar</span>
+            </h1>
+
+            <p>
+                Estudiante de sexto semestre de Administración
+                Tecnológica en el Instituto Tecnológico Metropolitano (ITM).
+                Interesada en el desarrollo administrativo,
+                organizacional y tecnológico.
+            </p>
+
+            <a href="#sobre-mi" class="btn">
+                Conoce más sobre mí
+            </a>
+
+        </div>
+
+        <div class="hero-icon">
+            DE
+        </div>
+
+    </section>
+
+    <!-- SOBRE MÍ -->
+
+    <section id="sobre-mi">
+
+        <h2 class="section-title">
+            Sobre mí
+        </h2>
+
+        <div class="about">
+
+            <p>
+                Soy Daniela Escobar, estudiante de Administración
+                Tecnológica del Instituto Tecnológico Metropolitano
+                (ITM), actualmente cursando sexto semestre.
+            </p>
+
+            <p>
+                Me caracterizo por mi interés en los procesos
+                administrativos y organizacionales. Cuento con
+                experiencia como auxiliar administrativa en un
+                centro de idiomas, donde he tenido acercamiento
+                a actividades propias del entorno administrativo
+                y de atención al usuario.
+            </p>
+
+            <div class="professional-profile">
+
+                <h3>Mi perfil profesional</h3>
+
+                <p>
+                    Es un ciudadano global que cuenta con formación
+                    integral, con cualidades éticas y de autonomía
+                    para su desarrollo profesional, con capacidad
+                    para planear, organizar, dirigir, controlar y
+                    evaluar los procesos de gestión del conocimiento,
+                    tecnología e innovación, alineándolos con la
+                    estrategia para el logro de los objetivos de
+                    las organizaciones en las que interviene, lo
+                    cual le permite tomar decisiones en contextos
+                    complejos, dinámicos e inciertos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FORMACIÓN ACADÉMICA -->
+
+    <section id="formacion">
+
+        <h2 class="section-title">
+            Formación académica
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">🎓</div>
+
+                <h3>Administración Tecnológica</h3>
+
+                <p>Institución Universitaria ITM</p>
+
+                <p>Sexto semestre en curso.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+
+    <section id="experiencia">
+
+        <h2 class="section-title">
+            Experiencia laboral
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">💼</div>
+
+                <h3>Auxiliar administrativa</h3>
+
+                <p>
+                    <strong>Sector:</strong> Centro de idiomas.
+                </p>
+
+                <p>
+                    Experiencia en el entorno administrativo
+                    de una institución dedicada a la enseñanza
+                    de idiomas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- INFORMACIÓN DE CONTACTO -->
+
+    <section class="contact" id="contacto">
+
+        <h2 class="section-title">
+            Información de contacto
+        </h2>
+
+        <div class="contact-info">
+
+            <p>
+                <strong>Nombre:</strong>
+                Daniela Escobar
+            </p>
+
+            <p>
+                <strong>Documento de identidad:</strong>
+                1000763769
+            </p>
+
+            <p>
+                <strong>Edad:</strong>
+                25 años
+            </p>
+
+            <p>
+                <strong>Dirección:</strong>
+                Cll 94
+            </p>
+
+            <p>
+                <strong>Correo electrónico:</strong>
+
+                <a href="mailto:danielaescobar286758@correo.itm.edu.co">
+                    danielaescobar286758@correo.itm.edu.co
+                </a>
+            </p>
+
+            <p>
+                <strong>Perfil profesional:</strong>
+                Administración Tecnológica.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- BOTÓN PARA DESCARGAR EL PORTAFOLIO EN PDF -->
+
+    <section class="download-section">
+
+        <h2 class="section-title">
+            Descarga mi portafolio
+        </h2>
+
+        <p>
+            Puedes descargar una copia de mi portafolio
+            profesional en formato PDF.
+        </p>
+
+        <button class="download-button" onclick="descargarPDF()">
+            📄 Descargar portafolio en PDF
+        </button>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+            © 2026 Daniela Escobar | Portafolio Profesional
+        </p>
+
+        <p>
+            Estudiante de Administración Tecnológica - ITM
+        </p>
+
+    </footer>
+
+    <!-- FUNCIÓN DE DESCARGA -->
+
+    <script>
+
+        function descargarPDF() {
+
+            const tituloOriginal = document.title;
+
+            document.title = "Portafolio_Daniela_Escobar";
+
+            window.print();
+
+            document.title = tituloOriginal;
+
+        }
+
+    </script>
+
+</body>
+</html>
+
